@@ -11,7 +11,7 @@ interface FormularioProps {
 export default function Formulario(props: FormularioProps) {
     const id = props.cliente?.id
     const [nome, setNome] = useState(props.cliente?.nome ?? '')
-    const [idade, setIdade] = useState(props.cliente?.idade ?? 0)
+    const [idede, setIdede] = useState(props.cliente.idede ?? 0)
     return (
         <div>
             {id ? (
@@ -29,14 +29,14 @@ export default function Formulario(props: FormularioProps) {
                 className="mb-2"
             />
             <Entrada
-                texto="Idade"
+                texto="Idede"
                 tipo="number"
-                valor={idade} 
-                valorMudou={setIdade}
+                valor={idede} 
+                valorMudou={setIdede}
             />
             <div className="flex justify-end mt-3">
                 <Botao cor="blue" className="mr-2"
-                onClick={() => props.clienteMudou?.(new Cliente(nome, +idade, id))}>
+                onClick={() => props.clienteMudou?.(new Cliente(nome, +idede, id))}>
                     {id ? 'Alterar' : 'Salvar'}
                 </Botao>
                 <Botao onClick={props.cancelado}

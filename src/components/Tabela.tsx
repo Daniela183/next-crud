@@ -28,7 +28,7 @@ export default function Tabela(props: TabelaProps) {
                     className={`${i % 2 === 0 ? 'bg-cyan-200' : 'bg-cyan-100'}`}>
                     <td className="text-left p-4">{cliente.id}</td>
                     <td className="text-left p-4">{cliente.nome}</td>
-                    <td className="text-left p-4">{cliente.idade}</td>
+                    <td className="text-left p-4">{cliente.idede}</td>
                     {exibirAcoes ? renderizarAcoes(cliente) : false}
                 </tr>
             )
@@ -49,8 +49,8 @@ export default function Tabela(props: TabelaProps) {
 
                 {props.clienteExcluido ? (
                     <button onClick={() => props.clienteExcluido?.(cliente)} className={`
-                    flex justify-center items-center text-red-600 rounded-full
-                    p-2 m-1 hover:bg-cyan-50
+                flex justify-center items-center text-red-600 rounded-full
+                 p-2 m-1 hover:bg-cyan-50
                 `}>
                         {IconeLixeira}
                     </button>
